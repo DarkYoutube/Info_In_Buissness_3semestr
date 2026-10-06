@@ -1,0 +1,6 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
+node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+a [label="{TimesheetAnalyzer\nTODO||+ parseHours(String) int[]\l+ total(int[]) int\l+ average(int[]) double\l+ overtimeDays(int[]) int\l+ weeklyOvertime(int[]) int\l}", fillcolor="#FDE9E7", color="#C00000"];
+}

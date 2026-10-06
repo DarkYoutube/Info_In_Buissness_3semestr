@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="naO6SGP1VB0_q6IW-nRf">
+    <mxGraphModel dx="953" dy="538" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-20" edge="1" parent="1" source="OrkDGeWR8ldfoI9UcwTc-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OrkDGeWR8ldfoI9UcwTc-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Начало" vertex="1">
+          <mxGeometry height="50" width="75" x="490" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-21" edge="1" parent="1" source="OrkDGeWR8ldfoI9UcwTc-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OrkDGeWR8ldfoI9UcwTc-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-2" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Получить количество, цену, скидку и ставку НДС" vertex="1">
+          <mxGeometry height="30" width="332" x="361.5" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-22" edge="1" parent="1" source="OrkDGeWR8ldfoI9UcwTc-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OrkDGeWR8ldfoI9UcwTc-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;strokeColor=default;" value="Количество товара от 0 до 10.000.&lt;br&gt;Цена одной штуки от 0 до 5.000.000.&lt;div&gt;Скидка от 0 до 30%.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="250" x="402.5" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-11" edge="1" parent="1" source="OrkDGeWR8ldfoI9UcwTc-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OrkDGeWR8ldfoI9UcwTc-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-18" connectable="0" parent="OrkDGeWR8ldfoI9UcwTc-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Да" vertex="1">
+          <mxGeometry relative="1" x="-0.6949" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-15" edge="1" parent="1" source="OrkDGeWR8ldfoI9UcwTc-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OrkDGeWR8ldfoI9UcwTc-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="695" y="515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-19" connectable="0" parent="OrkDGeWR8ldfoI9UcwTc-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Нет" vertex="1">
+          <mxGeometry relative="1" x="-0.7553" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-4" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Данные корректны" vertex="1">
+          <mxGeometry height="50" width="205.5" x="424.75" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-12" edge="1" parent="1" source="OrkDGeWR8ldfoI9UcwTc-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OrkDGeWR8ldfoI9UcwTc-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Вычислить базовую сумму" vertex="1">
+          <mxGeometry height="40" width="120" x="286.5" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-13" edge="1" parent="1" source="OrkDGeWR8ldfoI9UcwTc-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OrkDGeWR8ldfoI9UcwTc-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;strokeColor=default;" value="Вычисляем скидку (base - (base * (discountPercent/100))), а далее вычисляем НДС (discounted + (discounted * (vatPercent/100)))" vertex="1">
+          <mxGeometry height="60" width="300" x="196.5" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-14" edge="1" parent="1" source="OrkDGeWR8ldfoI9UcwTc-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="OrkDGeWR8ldfoI9UcwTc-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="346.6" y="885" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Вывести результат с двумя знаками после запятой" vertex="1">
+          <mxGeometry height="40" width="161.5" x="265.75" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-16" edge="1" parent="1" source="OrkDGeWR8ldfoI9UcwTc-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="OrkDGeWR8ldfoI9UcwTc-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="695" y="885" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Вывести причину ошибки" vertex="1">
+          <mxGeometry height="30" width="150" x="620" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="OrkDGeWR8ldfoI9UcwTc-9" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Завершение" vertex="1">
+          <mxGeometry height="50" width="75" x="490" y="860" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

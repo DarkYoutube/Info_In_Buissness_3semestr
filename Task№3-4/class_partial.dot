@@ -1,0 +1,6 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
+node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+app [label="{OrderCalculator\nTODO|- VAT_RATE double\l|+ main(String[])\l+ calculateBase(int,double)\l+ applyDiscount(double,double)\l+ calculateVat(double,double)\l+ isValid(...) boolean\l}", fillcolor="#FDE9E7", color="#C00000"];
+}
