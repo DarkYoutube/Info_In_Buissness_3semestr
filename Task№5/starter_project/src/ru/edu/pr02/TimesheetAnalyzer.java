@@ -2,6 +2,12 @@ package ru.edu.pr02;
 
 public class TimesheetAnalyzer {
 
+    private static final int DAYS_IN_WEEK = 5;
+    private static final int MIN_HOURS = 0;
+    private static final int MAX_HOURS = 16;
+    private static final int DAILY_OVERTIME_THRESHOLD = 8;
+    private static final int WEEKLY_NORM = 40;
+
     public static int[] parseHours(String line) {
         if (line == null || line.isEmpty()) {
             System.out.println("Ошибка: пустая строка");
@@ -10,14 +16,14 @@ public class TimesheetAnalyzer {
 
         String[] parts = line.split(";");
 
-        if (parts.length != 5) {
-            System.out.println("Ошибка: ожидалось 5 значений, получено " + parts.length);
+        if (parts.length != DAYS_IN_WEEK) {
+            System.out.println("Ошибка: ожидалось " + DAYS_IN_WEEK + " значений, получено " + parts.length);
             return new int[0];
         }
 
-        int[] hours = new int[5];
+        int[] hours = new int[DAYS_IN_WEEK];
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < DAYS_IN_WEEK; i++) {
             int value;
             try {
                 value = Integer.parseInt(parts[i]);
@@ -26,8 +32,10 @@ public class TimesheetAnalyzer {
                 return new int[0];
             }
 
-            if (value < 0 || value > 16) {
-                System.out.println("Ошибка в позиции " + (i + 1) + ": значение " + value + " вне диапазона 0..16");
+            if (value < MIN_HOURS || value > MAX_HOURS) {
+                System.out.println("Ошибка в позиции " + (i + 1)
+                        + ": значение " + value
+                        + " вне диапазона " + MIN_HOURS + ".." + MAX_HOURS);
                 return new int[0];
             }
 
@@ -44,22 +52,25 @@ public class TimesheetAnalyzer {
         }
         return sum;
     }
+
     public static double average(int[] hours) {
         int sum = total(hours);
-        return sum / 5.0;
+        return sum / (double) DAYS_IN_WEEK;
     }
+
     public static int overtimeDays(int[] hours) {
         int count = 0;
         for (int hour : hours) {
-            if (hour > 8) {
+            if (hour > DAILY_OVERTIME_THRESHOLD) {
                 count = count + 1;
             }
         }
         return count;
     }
+
     public static int weeklyOvertime(int[] hours) {
         int sum = total(hours);
-        int over = sum - 40;
+        int over = sum - WEEKLY_NORM;
         if (over < 0) {
             return 0;
         }
