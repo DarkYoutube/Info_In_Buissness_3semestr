@@ -1,0 +1,9 @@
+amount;urgent;risk;personal;expected
+120000;true;LOW;false;FAST_TRACK
+500000;false;LOW;false;STANDARD
+10000;true;HIGH;false;DIRECTOR_REVIEW
+10000;true;LOW;true;SECURITY_REVIEW
+999999;true;LOW;false;FAST_TRACK
+1000000;false;LOW;false;FINANCE_REVIEW
+-1;true;LOW;false;ERROR
+10000;true;null;false;ERROR

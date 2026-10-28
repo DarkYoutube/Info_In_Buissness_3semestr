@@ -1,0 +1,8 @@
+productId;name;price;quantity;expected
+M01;Monitor 27;32990;2;OK
+K01;Keyboard;4490;3;OK
+M01;Monitor 27;32990;1;OK
+X01;Broken;-100;1;SKIP
+L01;Lamp;1000;40;OK
+L02;Lamp Pro;2000;41;SKIP
+TOTAL;positions=3;sum=152440.00

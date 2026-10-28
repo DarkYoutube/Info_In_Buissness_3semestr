@@ -1,0 +1,14 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
+node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+p [label="{Product|- id String\l- name String\l- price double\l|+ Product(...)\l+ getPrice() double\l}", fillcolor="#F7FBFF", color="#2F5597"];
+e [label="{Employee|- id String\l- fullName String\l|+ Employee(...)\l}", fillcolor="#F7FBFF", color="#2F5597"];
+oi [label="{OrderItem|- product Product\l- quantity int\l|+ increase(int)\l+ getLineTotal() double\l}", fillcolor="#FDE9E7", color="#C00000"];
+o [label="{Order|- employee Employee\l- items List[OrderItem]\l- status OrderStatus\l|+ addProduct(Product,int)\l+ removeProduct(String)\l+ total() double\l+ confirm()\l+ addOrderSize() String\l}", fillcolor="#FDE9E7", color="#C00000"];
+s [label="{OrderService||+ createOrder(Employee) Order\l}", fillcolor="#FDE9E7", color="#C00000"];
+o -> e [label="1",arrowtail=odiamond,dir=both];
+o -> oi [label="1..*",arrowtail=diamond,dir=both];
+oi -> p [label="1",arrowtail=odiamond,dir=both];
+s -> o [label="uses",style=dashed,arrowhead=open];
+}

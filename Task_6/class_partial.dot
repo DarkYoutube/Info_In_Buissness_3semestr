@@ -1,0 +1,10 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
+node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+r [label="{ApprovalRoute||STANDARD\lFAST_TRACK\lFINANCE_REVIEW\lDIRECTOR_REVIEW\lSECURITY_REVIEW\l}", fillcolor="#F7FBFF", color="#2F5597"];
+a [label="{ApprovalRouter\nTODO|- FINANCE_LIMIT long\l|+ route(long,boolean,RiskLevel,boolean) ApprovalRoute\l}", fillcolor="#FDE9E7", color="#C00000"];
+risk [label="{RiskLevel||LOW\lMEDIUM\lHIGH\l}", fillcolor="#F7FBFF", color="#2F5597"];
+a -> r [label="returns",style=dashed,arrowhead=open];
+a -> risk [label="uses",style=dashed,arrowhead=open];
+}
