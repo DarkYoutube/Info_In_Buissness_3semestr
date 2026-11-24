@@ -1,0 +1,28 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.25, ranksep=0.35];
+node [shape=box, style="rounded,filled", fontname="Times New Roman", fontsize=11, color="#2F5597", fillcolor="#EAF2F8", margin="0.12,0.08"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+start [label="Начало", shape=oval, fillcolor="#E2F0D9", color="#548235"];
+end [label="Завершение", shape=oval, fillcolor="#FCE4D6", color="#C65911"];
+n1 [label="Получить складскую операцию" ,shape=parallelogram,fillcolor="#E4DFEC",color="#7030A0"];
+n2 [label="Найти позицию по коду (items.get)" ];
+n3 [label="Позиция существует (item != null)" ,shape=diamond,fillcolor="#FFF2CC",color="#BF9000"];
+n4 [label="Проверить допустимость: q > 0; для issue остаток >= q" ,shape=diamond,fillcolor="#FFF2CC",color="#BF9000"];
+n4_split [label="Вариант 24: для receive при q > 100 разбить на 2 операции по 50 и увеличить счётчик" ];
+n5 [label="Обновить остаток (increase / decrease)" ];
+n6 [label="Добавить запись движения (movements.add)" ];
+n7 [label="Пересчитать сводку по категории (totalsByCategory)" ];
+n8 [label="Вернуть ошибку (IllegalArgumentException)" ];
+start -> n1;
+n1 -> n2;
+n2 -> n3;
+n3 -> n4 [label="да"];
+n3 -> n8 [label="нет (R9)"];
+n4 -> n4_split [label="допустимо"];
+n4 -> n8 [label="ошибка (R2)"];
+n4_split -> n5;
+n5 -> n6;
+n6 -> n7;
+n7 -> end;
+n8 -> end;
+}

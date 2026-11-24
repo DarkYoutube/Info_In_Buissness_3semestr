@@ -1,0 +1,14 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
+node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+p [label="{ClientCsvParser\nTODO||+ parse(String,int) ClientDraft\l}", fillcolor="#FDE9E7", color="#C00000"];
+v [label="{ClientValidator\nTODO||+ validate(ClientDraft) ValidationResult\l}", fillcolor="#FDE9E7", color="#C00000"];
+i [label="{ClientImporter\nTODO|- parser\l- validator\l- repository\l|+ importFile(Path) ImportResult\l}", fillcolor="#FDE9E7", color="#C00000"];
+r [label="{ClientRepository||+ save(Client)\l+ findByInn(String)\l}", fillcolor="#F7FBFF", color="#2F5597"];
+res [label="{ImportResult|- accepted int\l- errors List[ImportError]\l|+ addAccepted()\l+ addError(...)\l}", fillcolor="#F7FBFF", color="#2F5597"];
+i -> p [label="1",arrowtail=odiamond,dir=both];
+i -> v [label="1",arrowtail=odiamond,dir=both];
+i -> r [label="1",arrowtail=odiamond,dir=both];
+i -> res [label="returns",style=dashed,arrowhead=open];
+}

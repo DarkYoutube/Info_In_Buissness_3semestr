@@ -1,0 +1,25 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.25, ranksep=0.35];
+node [shape=box, style="rounded,filled", fontname="Times New Roman", fontsize=11, color="#2F5597", fillcolor="#EAF2F8", margin="0.12,0.08"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+start [label="Начало", shape=oval, fillcolor="#E2F0D9", color="#548235"];
+end [label="Завершение", shape=oval, fillcolor="#FCE4D6", color="#C65911"];
+n1 [label="Получить параметры доставки" ,shape=parallelogram,fillcolor="#E4DFEC",color="#7030A0"];
+n2 [label="Определить тип доставки" ];
+n3 [label="Получить политику через factory.get(type)" ];
+n4 [label="Проверить возможность (policy.supports)" ];
+n5 [label="Доставка возможна?" ,shape=diamond,fillcolor="#FFF2CC",color="#BF9000"];
+n6 [label="Рассчитать стоимость (policy.calculateCost)" ];
+n7 [label="Вернуть стоимость" ];
+n8 [label="Вернуть ошибку (IllegalArgumentException)" ];
+start -> n1;
+n1 -> n2;
+n2 -> n3;
+n3 -> n4;
+n4 -> n5;
+n5 -> n6 [label="да"];
+n5 -> n8 [label="нет"];
+n6 -> n7;
+n7 -> end;
+n8 -> end;
+}

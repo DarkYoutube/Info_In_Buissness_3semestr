@@ -1,0 +1,16 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
+node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+p [label="{DeliveryPolicy||+ supports(DeliveryRequest) boolean\l+ calculateCost(DeliveryRequest) double\l}", fillcolor="#F7FBFF", color="#2F5597"];
+std [label="{StandardCourierPolicy||+ supports(DeliveryRequest) boolean\l+ calculateCost(DeliveryRequest) double\l}", fillcolor="#EAF2F8", color="#2F5597"];
+exp [label="{ExpressPolicy||+ supports(DeliveryRequest) boolean\l+ calculateCost(DeliveryRequest) double\l}", fillcolor="#EAF2F8", color="#2F5597"];
+pick [label="{PickupPolicy||+ supports(DeliveryRequest) boolean\l+ calculateCost(DeliveryRequest) double\l}", fillcolor="#EAF2F8", color="#2F5597"];
+f [label="{DeliveryPolicyFactory||+ get(DeliveryType) DeliveryPolicy\l}", fillcolor="#EAF2F8", color="#2F5597"];
+s [label="{DeliveryService|- factory DeliveryPolicyFactory\l|+ calculate(DeliveryRequest) double\l+ addMostExpensiveType(DeliveryService, DeliveryRequest) DeliveryType\l+ addCheapestCost(DeliveryService, DeliveryRequest) double\l+ addCostRange(DeliveryService, DeliveryRequest) double\l}", fillcolor="#F7FBFF", color="#2F5597"];
+std -> p [label="implements",arrowhead=empty,style=dashed];
+exp -> p [label="implements",arrowhead=empty,style=dashed];
+pick -> p [label="implements",arrowhead=empty,style=dashed];
+f -> p [label="creates",style=dashed,arrowhead=open];
+s -> f [label="1",arrowtail=odiamond,dir=both];
+}

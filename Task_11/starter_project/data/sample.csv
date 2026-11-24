@@ -1,0 +1,12 @@
+inn;name;email;tags
+1234567890;Иван Иванов;ivan@example.com;vip,new
+123456789012;Петрова Анна;anna@example.com;retail
+9876543210;Сидоров Пётр;petr@example.com;b2b,partner
+12345678901;Короткий ИНН;short@example.com;tag1
+12345abc90;Буквы ИНН;letters@example.com;tag1
+1234567890;Без Собаки;no_at_sign;tag1
+1234567890;Пустой Email;@example.com;tag1
+1234567890;Дубль ИНН;ivan2@example.com;tag1
+1234567890;Только Три Поля;three@example.com
+4444444444;Много Тегов;many@example.com;t1,t2,t3,t4,t5,t6
+5555555555;После Ошибки;after@example.com;a,b,c

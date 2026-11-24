@@ -1,0 +1,23 @@
+digraph C {
+graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
+node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
+edge [fontname="Times New Roman", fontsize=9, color="#555555"];
+
+w [label="{Warehouse|- items Map[String,StockItem]\l- movements List[StockMovement]\l- splitMovementsCount int\l|+ addItem(StockItem)\l+ receive(String,int)\l+ issue(String,int)\l+ findByCategory(Category) List\l+ totalsByCategory() Map\l+ addSplitMovements(Warehouse) int\l}", fillcolor="#EAF2F8", color="#2F5597"];
+
+i [label="{StockItem|- code String\l- name String\l- category Category\l- quantity int\l|+ StockItem(...)\l+ increase(int)\l+ decrease(int)\l+ equals(Object)\l+ hashCode()\l}", fillcolor="#EAF2F8", color="#2F5597"];
+
+m [label="{StockMovement|- itemCode String\l- type MovementType\l- quantity int\l|+ StockMovement(...)\l}", fillcolor="#F7FBFF", color="#2F5597"];
+
+cat [label="{Category|COMPUTER, DISPLAY,\lPERIPHERAL, NETWORK}", fillcolor="#FFF2CC", color="#BF9000"];
+
+mt [label="{MovementType|RECEIVE, ISSUE}", fillcolor="#FFF2CC", color="#BF9000"];
+
+sc [label="{SelfCheck||+ main(String[])\l}", fillcolor="#E2F0D9", color="#548235"];
+
+w -> i [label="0..*", arrowtail=diamond, dir=both];
+w -> m [label="0..*", arrowtail=diamond, dir=both];
+i -> cat [style=dashed];
+m -> mt [style=dashed];
+sc -> w [label="tests", style=dashed];
+}
