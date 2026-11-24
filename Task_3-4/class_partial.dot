@@ -2,5 +2,7 @@ digraph C {
 graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.35, ranksep=0.4];
 node [shape=record, style="filled", fontname="Times New Roman", fontsize=10, color="#2F5597", fillcolor="#F7FBFF"];
 edge [fontname="Times New Roman", fontsize=9, color="#555555"];
-app [label="{OrderCalculator\nTODO|- VAT_RATE double\l|+ main(String[])\l+ calculateBase(int,double)\l+ applyDiscount(double,double)\l+ calculateVat(double,double)\l+ isValid(...) boolean\l}", fillcolor="#FDE9E7", color="#C00000"];
+app [label="{OrderCalculator|+ FIXED_VAT: double = 40.0\l|+ isValid(int, double, double) boolean\l+ calculateBase(int, double) double\l+ applyDiscount(double, double) double\l+ calculateVat(double) double\l+ calculateTotal(int, double, double) double\l}", fillcolor="#EAF2F8", color="#2F5597"];
+sc [label="{SelfCheck||+ main(String[]) void\l}", fillcolor="#E2F0D9", color="#548235"];
+sc -> app [label="tests", style=dashed];
 }
